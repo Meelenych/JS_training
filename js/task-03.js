@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const uList = document.getElementById('gallery')
+
+let newLine = '';
+images.forEach(img =>
+    (newLine += `<li ><img src="${img.url}" alt="${img.alt}"/></li>`));
+
+uList.insertAdjacentHTML('beforeend', newLine)
+
+uList.style.listStyle = 'none'
