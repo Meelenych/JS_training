@@ -4,7 +4,7 @@ inputField.addEventListener('blur', (e) => {
 
     inputField.classList.forEach(className => inputField.classList.remove(className))
     
-    if (Number(inputField.value.length) === 6) {
+    if (e.target.value.length === Number(inputField.dataset.length)) {
         return inputField.classList.toggle('valid')
     }
     
@@ -12,3 +12,5 @@ inputField.addEventListener('blur', (e) => {
         return inputField.classList.toggle('invalid')
     }
 })
+
+console.dir(inputField.attributes)
